@@ -19,9 +19,6 @@ public class Event {
 
     String filepath = "hej.txt";
 
-
-
-
     Transport transport = new Transport();
     Møde møde = new Møde();
     Udflugt udflugt = new Udflugt();

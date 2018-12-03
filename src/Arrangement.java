@@ -1,3 +1,7 @@
+import javax.swing.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
@@ -13,6 +17,7 @@ public class Arrangement {
     public Event event = new Event();
     public Event listeAfEvents;
     //public Facilitator listeAfFacilitator;
+    String filepath = "hej.txt";
 
     public ArrayList<Arrangement> listeAfArrangementer = new ArrayList<Arrangement>();
 
@@ -75,6 +80,23 @@ public class Arrangement {
         Arrangement arrangement = new Arrangement(arrangementNavn, kundeEmail, kundeTlf, eventListe);
         System.out.println("**Følgende Arrangement er oprettet**");
         System.out.println(arrangement);
+
+        try {
+            FileWriter fw = new FileWriter(filepath,true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+
+            pw.println(arrangement);
+            pw.flush();
+            pw.close();
+
+            JOptionPane.showMessageDialog(null, "saved");
+        }
+        catch (Exception E)
+        {
+            JOptionPane.showMessageDialog(null, " not saved");
+
+        }
 
         //String indhold = Filer.getIndhold("arrangementer.csv");//oprindeligt arrangementer.csv
         //indhold += "\n" + arrangement;//tilføjer den nye

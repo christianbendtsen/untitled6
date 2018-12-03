@@ -1,2 +1,31 @@
+fest,gr8am8@gmail.com,345124346,
+Eventnavn: null 
+Eventbeskrivelse: null 
+Pris: 100
+Startdato: null
+Slutdato: null
+Start tid: 0.0. 
+Slut tid: 0.0
+Ansvarlig facilitator: null
+EventType: null
+fest,hej@gmail.com,11245235,
 
-jule hallløj,100,fge erye r ryreywy,10.03.2018,11,03,2018,14.0,15.3,gustav,null,
+Arrangementnavn: dak. 
+Kundes email: gggggg@.com.
+Kundes telefonnummer: 1235245346. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: hej 
+Eventbeskrivelse: ghfgh 
+Pris: 100
+Startdato: 05.05.05
+Slutdato: 06.06.06
+Start tid: 13.0. 
+Slut tid: 19.0
+Ansvarlig facilitator: bob
+EventType:  Transport
+Transportmiddel: bus
+Afhentningstidspunkt: 13.0
+Drop Off tidspunkt: kbh
+ Afhentningssted: 
+Drop Off sted: kbh]

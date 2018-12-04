@@ -1,7 +1,3 @@
-import javax.swing.*;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Event {
@@ -12,18 +8,19 @@ public class Event {
     private String beskrivelse;
     private String startDato;
     private String slutDato;
-    private double tidStart;
-    private double tidSlut;
+    private String tidStart;
+    private String tidSlut;
     private String facilitator;
     private EventType type;
 
-    String filepath = "hej.txt";
+
+
 
     Transport transport = new Transport();
     Møde møde = new Møde();
     Udflugt udflugt = new Udflugt();
 
-    public Event(String navn, String beskrivelse, int pris, String startDato, String slutDato, double tidStart, double tidSlut, String facilitator, EventType type, String filepath) {
+    public Event(String navn, String beskrivelse, int pris, String startDato, String slutDato, String tidStart, String tidSlut, String facilitator, EventType type) {
         this.navn = navn;
         this.pris = pris;
         this.beskrivelse = beskrivelse;
@@ -33,15 +30,10 @@ public class Event {
         this.tidSlut = tidSlut;
         this.facilitator=facilitator;
         this.type = type;
-        this.filepath= filepath;
-
     }
 
     public Event() {
 
-    }
-
-    public Event(String navn, String beskrivelse, int pris, String startDato, String slutDato, double tidStart, double tidSlut, String facilitator, EventType e) {
     }
 
     public Event tilføjEvent() {
@@ -61,9 +53,9 @@ public class Event {
         System.out.println();
         String slutDato = console.nextLine();
         System.out.print("Starttid: ");
-        double tidStart = console.nextDouble();
+        String tidStart = console.nextLine();
         System.out.print("Sluttid: ");
-        double tidSlut = console.nextDouble();
+        String tidSlut = console.nextLine();
         System.out.print("Ansvarlig facilitator: ");
         String facilitator = console.next();
         System.out.println("** Vælg eventtype **");
@@ -86,7 +78,7 @@ public class Event {
             System.out.print("Vælg eventtype: transport = 1, møde = 2, udflugt = 3");
         }
 
-        try {
+        /*try {
             FileWriter fw = new FileWriter(filepath,true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
@@ -101,7 +93,7 @@ public class Event {
         {
             JOptionPane.showMessageDialog(null, " not saved");
 
-        }
+        }*/
 
 
 
@@ -119,27 +111,4 @@ public class Event {
                 "Start tid: " + tidStart + ". \n" + "Slut tid: " + tidSlut + "\n" +
                 "Ansvarlig facilitator: " + facilitator + "\n" + "EventType: " + type;
     }
-
-    /*public void test (String navn, int pris, String beskrivelse, String startDato, String slutDato, double tidStart, double tidSlut, String facilitator, EventType type, String filepath)
-    {
-        try {
-            FileWriter fw = new FileWriter(filepath,true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter pw = new PrintWriter(bw);
-
-            pw.println(navn+ ","+ pris+ ","+ beskrivelse+ ","+ startDato+ ","+ slutDato+ ","+ tidStart+ ","+ tidSlut+ ","+ facilitator+","+ type+",");
-            pw.flush();
-            pw.close();
-
-            JOptionPane.showMessageDialog(null, "saved");
-        }
-        catch (Exception E)
-        {
-            JOptionPane.showMessageDialog(null, " not saved");
-
-        }
-    }*/
-
-
-
 }

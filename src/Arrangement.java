@@ -1,5 +1,8 @@
+import javax.swing.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -9,10 +12,11 @@ public class Arrangement {
     //private double totalVarighed;
     //private double totalPris;
     public String kundeEmail;
-    public int kundeTlf;
+    public String kundeTlf;
     public Event event = new Event();
     public Event listeAfEvents;
     //public Facilitator listeAfFacilitator;
+    String filepath = "hej.txt";
 
     public ArrayList<Arrangement> listeAfArrangementer = new ArrayList<Arrangement>();
 
@@ -27,7 +31,7 @@ public class Arrangement {
         return eventListe;
     }
 
-    public Arrangement (String arrangementNavn, String kundeEmail, int kundeTlf, ArrayList<Event> eventListe)
+    public Arrangement (String arrangementNavn, String kundeEmail, String kundeTlf, ArrayList<Event> eventListe)
     {
         this.arrangementNavn=arrangementNavn;
         this.kundeEmail=kundeEmail;
@@ -51,10 +55,10 @@ public class Arrangement {
         System.out.println();
         String kundeEmail = console.nextLine();
         System.out.print("Kundes telefonnummer: ");
-        int kundeTlf;
+        String kundeTlf;
         while (true) {
             try {
-                kundeTlf = console.nextInt();
+                kundeTlf = console.nextLine();
                 break;
             }
             catch (InputMismatchException e) {
@@ -75,6 +79,23 @@ public class Arrangement {
         Arrangement arrangement = new Arrangement(arrangementNavn, kundeEmail, kundeTlf, eventListe);
         System.out.println("**Følgende Arrangement er oprettet**");
         System.out.println(arrangement);
+
+        try {
+            FileWriter fw = new FileWriter(filepath,true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+
+            pw.println(arrangement);
+            pw.flush();
+            pw.close();
+
+            JOptionPane.showMessageDialog(null, "saved");
+        }
+        catch (Exception E)
+        {
+            JOptionPane.showMessageDialog(null, " not saved");
+
+        }
 
         //String indhold = Filer.getIndhold("arrangementer.csv");//oprindeligt arrangementer.csv
         //indhold += "\n" + arrangement;//tilføjer den nye

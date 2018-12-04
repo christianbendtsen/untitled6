@@ -4,13 +4,13 @@ public class Transport implements EventType {
 
 
     public String transportMiddel;
-    public double startTidspunkt;
-    public double slutTidspunkt;
+    public String startTidspunkt;
+    public String slutTidspunkt;
     public String pickUp;
     public String dropOff;
 
 
-    public Transport(String transportMiddel, double startTidspunkt, double slutTidspunkt, String pickUp, String dropOff) {
+    public Transport(String transportMiddel, String startTidspunkt, String slutTidspunkt, String pickUp, String dropOff) {
 
         this.transportMiddel = transportMiddel;
         this.startTidspunkt = startTidspunkt;
@@ -29,9 +29,9 @@ public class Transport implements EventType {
         System.out.print("Transportmiddel: ");
         String transportmiddel = input.nextLine();
         System.out.print("Start tidspunkt: ");
-        double startTidspunkt = input.nextDouble();
+        String startTidspunkt = input.nextLine();
         System.out.print("Slut tidspunkt: ");
-        double slutTidspunkt = input.nextDouble();
+        String slutTidspunkt = input.nextLine();
         System.out.print("Pick Up sted: ");
         System.out.println();
         String pickUp = input.nextLine();

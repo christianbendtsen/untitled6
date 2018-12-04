@@ -7,5 +7,6 @@ public class Main
         Personale.addFacilitatorDummyData();
         startMenu.validerBruger();
 
+     
     }
 }

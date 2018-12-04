@@ -8,8 +8,8 @@ Der er tilknyttet følgende event:[
 Eventnavn: Julefrokost danske bank 
 Eventbeskrivelse: massere af sprut og mad 
 Pris: 100
-Startdato: d. 12 december 2018
-Slutdato: d. 13 december 2018
+Startdato: d. 11 december 2018
+Slutdato: d. 12 december 2018
 Start tid: kl 14.00. 
 Slut tid: kl 04.30
 Ansvarlig facilitator: Christian

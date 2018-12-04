@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class Arrangement {
     public Event listeAfEvents;
     //public Facilitator listeAfFacilitator;
     String filepath = "hej.txt";
+
 
     public ArrayList<Arrangement> listeAfArrangementer = new ArrayList<Arrangement>();
 
@@ -101,14 +103,15 @@ public class Arrangement {
 
         }
 
-        //String indhold = Filer.getIndhold("arrangementer.csv");//oprindeligt arrangementer.csv
-        //indhold += "\n" + arrangement;//tilføjer den nye
-        //Filer.skrivFil("arrangementer.csv", indhold);
 
         return arrangement;
 
 
+
     }
+
+
+
 
     public String toString()
     {

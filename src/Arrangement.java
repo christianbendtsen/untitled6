@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -16,7 +17,10 @@ public class Arrangement {
     public Event event = new Event();
     public Event listeAfEvents;
     //public Facilitator listeAfFacilitator;
-    String filepath = "hej.txt";
+    String filepath;
+
+
+
 
     public ArrayList<Arrangement> listeAfArrangementer = new ArrayList<Arrangement>();
 
@@ -43,15 +47,15 @@ public class Arrangement {
     {
 
     }
-    public Arrangement(String filepath){
-        this.filepath=filepath;
-    }
+
 
     public Arrangement opretArrangement()
     {
         Scanner console = new Scanner(System.in);
 
         System.out.println("**Udfyld data for nyt arrangement**");
+        System.out.println("Angiv navn på fil efterfulgt af et .txt");
+        String filepath = console.nextLine();
         System.out.print("Navn på arrangementet: ");
         System.out.println();
         String arrangementNavn = console.nextLine();

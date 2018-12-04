@@ -16,14 +16,24 @@ public class Personale {
         this.Id=id;
         this.Pin=pin;
     }
-    public static ArrayList<Personale> PersonaleListe = new ArrayList<Personale>();
+    public static ArrayList<Personale> Sekretærliste = new ArrayList<Personale>();
+    public static ArrayList<Personale> Facilitatorliste = new ArrayList<>();
 
-    public static void addDummyDataPersonale()
+    public static void addSekretærDummyData()
     {
-        PersonaleListe.add(new Personale(0, 000));
-        PersonaleListe.add(new Personale(1, 111));
-        PersonaleListe.add(new Personale(2, 222));
-        PersonaleListe.add(new Personale(3, 333));
-        PersonaleListe.add(new Personale(4, 444));
+        Sekretærliste.add(new Personale(0, 00));
+        Sekretærliste.add(new Personale(1, 11));
+        Sekretærliste.add(new Personale(2, 22));
+        Sekretærliste.add(new Personale(3, 33));
+        //Sekretærliste.add(new Personale(4, 44));
+    }
+
+    public static void addFacilitatorDummyData()
+    {
+        Facilitatorliste.add(new Personale(0,000));
+        Facilitatorliste.add(new Personale(1,111));
+        Facilitatorliste.add(new Personale(2,222));
+        Facilitatorliste.add(new Personale(3,333));
+
     }
 }

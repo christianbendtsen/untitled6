@@ -18,6 +18,7 @@ public class Facilitator {
         switch (in) {
             case 1:
                 sekretær.ArrangementListe();
+                facilitatormenu(sekretær);
                 break;
             case 2:
                 StartMenu.validerBruger();

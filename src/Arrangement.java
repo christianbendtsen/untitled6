@@ -43,6 +43,10 @@ public class Arrangement {
     {
 
     }
+    public Arrangement(String filepath){
+        this.filepath=filepath;
+    }
+
     public Arrangement opretArrangement()
     {
         Scanner console = new Scanner(System.in);
@@ -113,7 +117,3 @@ public class Arrangement {
     }
 
 }
-
-
-
-

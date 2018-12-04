@@ -2,7 +2,7 @@
 
 Arrangementnavn: Danske  bank. 
 Kundes email: danske@hotmail.com.
-Kundes telefonnummer:  12 32 54 56. 
+Kundes telefonnummer:  12 32 54 57.
 
 Der er tilknyttet følgende event:[
 Eventnavn: Julefrokost danske bank 
@@ -61,3 +61,23 @@ Afhentningstidspunkt: kl. 19.00
 Drop Off tidspunkt:  ABAR
  Afhentningssted: KEA, Lygten 16, 2200 Nørrebro
 Drop Off sted:  ABAR]
+
+Arrangementnavn: Fest. 
+Kundes email: fest@gmail.com.
+Kundes telefonnummer: 53555307. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: Dakdakdak 
+Eventbeskrivelse: vi skal dakke hele natten 
+Pris: 100
+Startdato: 01.01.1000
+Slutdato: 02.01.1000
+Start tid: 15. 
+Slut tid: 16
+Ansvarlig facilitator: Gustav
+EventType:  Transport
+Transportmiddel: Bus
+Afhentningstidspunkt: 12
+Drop Off tidspunkt: kbh
+ Afhentningssted: kbh
+Drop Off sted: kbh]

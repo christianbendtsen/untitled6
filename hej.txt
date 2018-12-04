@@ -1,31 +1,63 @@
-fest,gr8am8@gmail.com,345124346,
-Eventnavn: null 
-Eventbeskrivelse: null 
-Pris: 100
-Startdato: null
-Slutdato: null
-Start tid: 0.0. 
-Slut tid: 0.0
-Ansvarlig facilitator: null
-EventType: null
-fest,hej@gmail.com,11245235,
 
-Arrangementnavn: dak. 
-Kundes email: gggggg@.com.
-Kundes telefonnummer: 1235245346. 
+
+Arrangementnavn: Danske  bank. 
+Kundes email: danske@hotmail.com.
+Kundes telefonnummer:  12 32 54 56. 
 
 Der er tilknyttet følgende event:[
-Eventnavn: hej 
-Eventbeskrivelse: ghfgh 
+Eventnavn: Julefrokost danske bank 
+Eventbeskrivelse: massere af sprut og mad 
 Pris: 100
-Startdato: 05.05.05
-Slutdato: 06.06.06
-Start tid: 13.0. 
-Slut tid: 19.0
-Ansvarlig facilitator: bob
+Startdato: d. 12 december 2018
+Slutdato: d. 13 december 2018
+Start tid: kl 14.00. 
+Slut tid: kl 04.30
+Ansvarlig facilitator: Christian
 EventType:  Transport
-Transportmiddel: bus
-Afhentningstidspunkt: 13.0
-Drop Off tidspunkt: kbh
- Afhentningssted: 
-Drop Off sted: kbh]
+Transportmiddel: Bus
+Afhentningstidspunkt: 13.00
+Drop Off tidspunkt: Rhinobar
+ Afhentningssted: Danske bank
+Drop Off sted: Rhinobar]
+
+
+
+Arrangementnavn: Jyske bank. 
+Kundes email: jyske@hotmail.com.
+Kundes telefonnummer: 34 56 78 43. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: Påskefrokost  
+Eventbeskrivelse: massere af SNAPS og mad 
+Pris: 100
+Startdato: d. 10 marts 2019
+Slutdato: d. 11 marts 2019
+Start tid: kl 13.00. 
+Slut tid: kl 03.30
+Ansvarlig facilitator: Gustav
+EventType:  Transport
+Transportmiddel: Bus
+Afhentningstidspunkt: kl. 12.00
+Drop Off tidspunkt:  KB hallen
+ Afhentningssted: Jyskebank 
+Drop Off sted:  KB hallen]
+
+Arrangementnavn: Fest. 
+Kundes email: fest@hotmail.com.
+Kundes telefonnummer: 84 56 67 86. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: fest kea 
+Eventbeskrivelse: drik jer helt i hegnet 
+Pris: 100
+Startdato: d. 11 august 2019
+Slutdato: d. 12 august 2019
+Start tid: kl 20.00. 
+Slut tid: kl. 05.30
+Ansvarlig facilitator: Gustav
+EventType:  Transport
+Transportmiddel: Bus
+Afhentningstidspunkt: kl. 19.00
+Drop Off tidspunkt:  ABAR
+ Afhentningssted: KEA, Lygten 16, 2200 Nørrebro
+Drop Off sted:  ABAR]

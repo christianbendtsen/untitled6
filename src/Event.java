@@ -1,7 +1,3 @@
-import javax.swing.*;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Event {
@@ -12,8 +8,8 @@ public class Event {
     private String beskrivelse;
     private String startDato;
     private String slutDato;
-    private double tidStart;
-    private double tidSlut;
+    private String tidStart;
+    private String tidSlut;
     private String facilitator;
     private EventType type;
 
@@ -24,7 +20,7 @@ public class Event {
     Møde møde = new Møde();
     Udflugt udflugt = new Udflugt();
 
-    public Event(String navn, String beskrivelse, int pris, String startDato, String slutDato, double tidStart, double tidSlut, String facilitator, EventType type) {
+    public Event(String navn, String beskrivelse, int pris, String startDato, String slutDato, String tidStart, String tidSlut, String facilitator, EventType type) {
         this.navn = navn;
         this.pris = pris;
         this.beskrivelse = beskrivelse;
@@ -57,9 +53,9 @@ public class Event {
         System.out.println();
         String slutDato = console.nextLine();
         System.out.print("Starttid: ");
-        double tidStart = console.nextDouble();
+        String tidStart = console.nextLine();
         System.out.print("Sluttid: ");
-        double tidSlut = console.nextDouble();
+        String tidSlut = console.nextLine();
         System.out.print("Ansvarlig facilitator: ");
         String facilitator = console.next();
         System.out.println("** Vælg eventtype **");

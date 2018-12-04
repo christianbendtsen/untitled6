@@ -3,7 +3,6 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -13,7 +12,7 @@ public class Arrangement {
     //private double totalVarighed;
     //private double totalPris;
     public String kundeEmail;
-    public int kundeTlf;
+    public String kundeTlf;
     public Event event = new Event();
     public Event listeAfEvents;
     //public Facilitator listeAfFacilitator;
@@ -32,7 +31,7 @@ public class Arrangement {
         return eventListe;
     }
 
-    public Arrangement (String arrangementNavn, String kundeEmail, int kundeTlf, ArrayList<Event> eventListe)
+    public Arrangement (String arrangementNavn, String kundeEmail, String kundeTlf, ArrayList<Event> eventListe)
     {
         this.arrangementNavn=arrangementNavn;
         this.kundeEmail=kundeEmail;
@@ -56,10 +55,10 @@ public class Arrangement {
         System.out.println();
         String kundeEmail = console.nextLine();
         System.out.print("Kundes telefonnummer: ");
-        int kundeTlf;
+        String kundeTlf;
         while (true) {
             try {
-                kundeTlf = console.nextInt();
+                kundeTlf = console.nextLine();
                 break;
             }
             catch (InputMismatchException e) {

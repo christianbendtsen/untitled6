@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.security.KeyStore;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,9 +11,33 @@ public class Sekretær {
     public Sekretær(){
     }
 
-    public void ArrangementListe() {
-        System.out.println("You know nothing Jon Snow");
-        StartMenu.validerBruger();
+    public static void ArrangementListe() {
+        try {
+            System.out.print("Skriv filnavn med filtype bagefter: ");
+
+            Scanner input = new Scanner(System.in);
+
+            File file = new File(input.nextLine());
+
+            input = new Scanner(file);
+
+
+            while (input.hasNextLine()) {
+                String line = input.nextLine();
+                System.out.println(line);
+            }
+            input.close();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        //Scanner reader = new Scanner(newFileInputStream("hej.txt""));
+
+        System.out.println("***************************");
+        System.out.println("*Du bliver nu sendt tilbage til din menu*");
+        System.out.println("**************************");
+
     }
 
     public void opretArrangement() {
@@ -28,8 +55,23 @@ public class Sekretær {
         System.out.println("Velkommen Sekretær");
         System.out.println("Vælg følgende handling: ");
         System.out.println("1. Book Arrangement:");
-        Arrangement a = new Arrangement();
-        a.opretArrangement();
+        System.out.println("2. Se Arrangementliste");
+        System.out.println("3. Log ud");
+        int in = console.nextInt();
+        switch (in){
+            case 1:
+                Arrangement a = new Arrangement();
+                a.opretArrangement();
+                SekretærMenu();
+                break;
+            case 2:
+                ArrangementListe();
+                SekretærMenu();
+            case 3:
+                StartMenu.validerBruger();
+        }
+
+
 
     }
 }

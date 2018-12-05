@@ -20,7 +20,7 @@ try{
             if (Personale.Facilitatorliste.get(inId).CheckPin(inPin)) {
                 Facilitator.facilitatormenu(sekretær);
             } else if (Personale.Sekretærliste.get(inId).CheckPin(inPin)) {
-                Sekretær.sekretærMenu();
+                Sekretær.SekretærMenu();
                 break;
             } else {
                 System.out.println("*** !!! Forkert log-in, prøv igen !!! ***");

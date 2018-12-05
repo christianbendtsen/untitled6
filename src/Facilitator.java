@@ -8,7 +8,7 @@ public class Facilitator {
     //StartMenu startMenu = new StartMenu();
     //Arrangement arrangement = new Arrangement();
 
-    public static void facilitatormenu(Sekretær sekretær) {
+    public static void facilitatormenu(Sekretær sekretær) { // to be continued....
         Scanner console = new Scanner(System.in);
         System.out.println("Velkommen facilitator");
         System.out.println("Du har følgende muligheder: ");

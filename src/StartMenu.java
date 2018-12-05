@@ -20,7 +20,7 @@ try{
             if (Personale.Facilitatorliste.get(inId).CheckPin(inPin)) {
                 Facilitator.facilitatormenu(sekretær);
             } else if (Personale.Sekretærliste.get(inId).CheckPin(inPin)) {
-                Sekretær.SekretærMenu();
+                Sekretær.sekretærMenu();
                 break;
             } else {
                 System.out.println("*** !!! Forkert log-in, prøv igen !!! ***");
@@ -30,9 +30,9 @@ try{
         catch (Exception ex){
         System.out.println(" ");
         System.out.println(" ");
-        System.out.println("************************************************************************************");
-        System.out.println("Vi forstår ikke dit log in. Log ind med dit ID og Pinkode eller kontakt adminstrator");
-        System.out.println("************************************************************************************");
+        System.out.println("*********************************************************");
+        System.out.println("Vi forstår ikke dit log in. Log ind med dit ID og Pinkode");
+        System.out.println("*********************************************************");
 
             validerBruger();
         }

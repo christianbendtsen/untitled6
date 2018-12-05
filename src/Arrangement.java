@@ -22,6 +22,7 @@ public class Arrangement {
     private ArrayList<Event> eventListe = new ArrayList<Event>();
     public Event listeAfEvents;
     //public Facilitator listeAfFacilitator;
+<<<<<<< Updated upstream
     String filepath;
 
 
@@ -29,6 +30,11 @@ public class Arrangement {
 <<<<<<< Updated upstream
 
 =======
+>>>>>>> Stashed changes
+=======
+
+
+
 >>>>>>> Stashed changes
 
     public ArrayList<Arrangement> listeAfArrangementer = new ArrayList<Arrangement>();
@@ -54,6 +60,7 @@ public class Arrangement {
     }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 
     //læser et events starttidspunkt fra Arraylisten eventliste
@@ -73,6 +80,23 @@ public class Arrangement {
             eventSlut = eventListe.get(i).getSlutTidspunkt();
 >>>>>>> Stashed changes
 
+=======
+
+    //læser det første tilknyttede events starttidspunkt fra Arraylisten eventliste - skal bruges til at regne total tid og pris ud
+    public LocalDateTime getEventStart (ArrayList<Event> eventListe)
+    {
+        eventStart = eventListe.get(0).getStartTidspunkt();
+
+        return eventStart;
+    }
+    //læser det sidste tilknyttede events sluttidspunkt fra Arraylisten eventliste - skal bruges til at regne total tid og pris ud
+    public LocalDateTime getEventSlut (ArrayList<Event> eventListe)
+    {
+
+        for (int i=0; i<eventListe.size(); i++) {
+            eventSlut = eventListe.get(i).getSlutTidspunkt();
+
+>>>>>>> Stashed changes
         }
         return eventSlut;
     }
@@ -122,15 +146,16 @@ public class Arrangement {
             pw.println(arrangement);
             pw.flush();
             pw.close();
-
             JOptionPane.showMessageDialog(null, "saved");
+
         }
-        catch (Exception E)
+        catch (Exception e)
         {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(null, " not saved");
-
         }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
 =======
@@ -139,6 +164,10 @@ public class Arrangement {
 
 
 
+=======
+        return arrangement;
+
+>>>>>>> Stashed changes
     }
     public static String TotalTidOgPris (LocalDateTime eventStart, LocalDateTime eventSlut)
     {
@@ -148,12 +177,16 @@ public class Arrangement {
         long totalMinutter = totalTid-(totalTimer*60)-(totalDage*24*60);//finder antal minutter ud fra ovenstående forskel fratrukket dage og timer
 
         long totalTidIHalveTimer = totalTid/30;//finder antal halve timer ud fra den samlede forskel i minutter - pris for arrangement betales pr. halve timer
+<<<<<<< Updated upstream
 
 <<<<<<< Updated upstream
 
 
 
 =======
+=======
+
+>>>>>>> Stashed changes
         long totalPris;
         //regner prisen for at arrangement ud - én pris for hverdage og én pris for weekend (HUSK at skriv i opgaven, at vi regner pris ud fra hvornår eventet starter)
         if(eventStart.getDayOfWeek() != DayOfWeek.SATURDAY && eventStart.getDayOfWeek() != DayOfWeek.SUNDAY)
@@ -169,6 +202,9 @@ public class Arrangement {
                 "\n" + "Totalpris (uden moms): " + totalPris + " kr.";
 
     }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     public String toString()
     {

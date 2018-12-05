@@ -12,27 +12,58 @@ public class Sekretær {
     }
 
     public static void ArrangementListe() {
-        try {
-            System.out.print("Skriv filnavn med filtype bagefter: ");
+        Scanner console = new Scanner(System.in);
+        System.out.println("Du har nu følgende muligheder: ");
+        System.out.println("1. Se alle arrangementer for specifik facilitator");
+        System.out.println("2. Se specifikt arrangement");
+        int in = console.nextInt();
+        switch (in) {
+            case 1:
+            try {
 
-            Scanner input = new Scanner(System.in);
+                System.out.print("Skriv facilitatornavn med filtype bagefter: ");
+                System.out.println("\nEksempel: gustav.txt");
 
-            File file = new File(input.nextLine());
+                Scanner input = new Scanner(System.in);
 
-            input = new Scanner(file);
+                File file = new File(input.nextLine());
+
+                input = new Scanner(file);
 
 
-            while (input.hasNextLine()) {
-                String line = input.nextLine();
-                System.out.println(line);
+                while (input.hasNextLine()) {
+                    String line = input.nextLine();
+                    System.out.println(line);
+                }
+                input.close();
+
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
-            input.close();
+            break;
+            case 2:
+                try {
 
-        } catch (Exception ex) {
-            ex.printStackTrace();
+                    System.out.print("Skriv filnavn med filtype bagefter: ");
+                    System.out.println("\nEksempel: DanskeBankJuleFrokost.txt");
+
+                    Scanner input2 = new Scanner(System.in);
+
+                    File file = new File(input2.nextLine());
+
+                    input2 = new Scanner(file);
+
+
+                    while (input2.hasNextLine()) {
+                        String line = input2.nextLine();
+                        System.out.println(line);
+                    }
+                    input2.close();
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
         }
-
-        //Scanner reader = new Scanner(newFileInputStream("hej.txt""));
 
         System.out.println("***************************");
         System.out.println("*Du bliver nu sendt tilbage til din menu*");

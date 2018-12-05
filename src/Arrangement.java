@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.time.DayOfWeek;
@@ -20,20 +19,6 @@ public class Arrangement {
     private LocalDateTime eventStart;
     private LocalDateTime eventSlut;
     private ArrayList<Event> eventListe = new ArrayList<Event>();
-    public Event listeAfEvents;
-    //public Facilitator listeAfFacilitator;
-    String filepath;
-
-
-
-
-    public ArrayList<Arrangement> listeAfArrangementer = new ArrayList<Arrangement>();
-
-    public ArrayList<Arrangement> getListeAfArrangementer() {
-
-        return listeAfArrangementer;
-    }
-
 
 
     public Arrangement (String arrangementNavn, String kundeEmail, String kundeTlf, ArrayList<Event> eventListe)
@@ -74,6 +59,8 @@ public class Arrangement {
         System.out.println("**Udfyld data for nyt arrangement**");
         System.out.println("Angiv navn på fil efterfulgt af et .txt");
         String filepath = console.nextLine();
+        System.out.println("Angiv navn på ansvarlig faciliator efterfulgt af .txt");
+        String filepath1 = console.nextLine();
         System.out.print("Navn på arrangementet: ");
         System.out.println();
         String arrangementNavn = console.nextLine();
@@ -101,6 +88,7 @@ public class Arrangement {
             valg = console.nextInt();
         }
 
+
         Arrangement arrangement = new Arrangement(arrangementNavn, kundeEmail, kundeTlf, eventListe);
         System.out.println("**Følgende Arrangement er oprettet**");
         System.out.println(arrangement);
@@ -122,8 +110,24 @@ public class Arrangement {
 
         }
 
-        return arrangement;
+        try {
+            FileWriter fw1 = new FileWriter(filepath1,true);
+            BufferedWriter bw1 = new BufferedWriter(fw1);
+            PrintWriter pw1 = new PrintWriter(bw1);
 
+            pw1.println(arrangement);
+            pw1.flush();
+            pw1.close();
+
+            JOptionPane.showMessageDialog(null, "saved");
+        }
+        catch (Exception E)
+        {
+            JOptionPane.showMessageDialog(null, " not saved");
+
+        }
+
+        return arrangement;
     }
     public static String TotalTidOgPris (LocalDateTime eventStart, LocalDateTime eventSlut)
     {

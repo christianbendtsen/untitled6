@@ -2,7 +2,7 @@
 
 Arrangementnavn: Danske  bank. 
 Kundes email: danske@hotmail.com.
-Kundes telefonnummer:  12 32 54 57.
+Kundes telefonnummer:  12 32 54 56. 
 
 Der er tilknyttet følgende event:[
 Eventnavn: Julefrokost danske bank 
@@ -62,22 +62,66 @@ Drop Off tidspunkt:  ABAR
  Afhentningssted: KEA, Lygten 16, 2200 Nørrebro
 Drop Off sted:  ABAR]
 
-Arrangementnavn: Fest. 
-Kundes email: fest@gmail.com.
-Kundes telefonnummer: 53555307. 
+Arrangementnavn: Sommerfest på KEA. 
+Kundes email: kea@kea.dk.
+Kundes telefonnummer: 23344556. 
 
 Der er tilknyttet følgende event:[
-Eventnavn: Dakdakdak 
-Eventbeskrivelse: vi skal dakke hele natten 
+Eventnavn: Partyyyyy 
+Eventbeskrivelse: Alle danser amok til de nyeste tunes 
 Pris: 100
-Startdato: 01.01.1000
-Slutdato: 02.01.1000
-Start tid: 15. 
-Slut tid: 16
-Ansvarlig facilitator: Gustav
-EventType:  Transport
-Transportmiddel: Bus
-Afhentningstidspunkt: 12
-Drop Off tidspunkt: kbh
- Afhentningssted: kbh
-Drop Off sted: kbh]
+Startdato og tid: 2019-08-09T19:00
+Slutdato og tid: 2019-08-10T02:00
+Ansvarlig facilitator: Sofie
+EventType:  Udflugt
+Lokation: Festsalen]
+Arrangements totale varighed: Arrangements totale varighed: 0 dage 7 timer 0 minutter.
+Totalpris (uden moms): 3500 kr.
+
+Arrangementnavn: Sommerfest. 
+Kundes email: emeail@email.dk.
+Kundes telefonnummer: 34455667. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: Event 
+Eventbeskrivelse: beskrivelse 
+Startpris: 100
+Startdato og tid: 2018-12-12T19:00
+Slutdato og tid: 2018-12-13T02:00
+Ansvarlig facilitator: Sofie
+EventType:  Udflugt
+Lokation: Tivoli]
+Arrangements totale varighed: 0 dage 7 timer 0 minutter.
+Totalpris (uden moms): 3600 kr.
+
+Arrangementnavn: fefe. 
+Kundes email: fefe.
+Kundes telefonnummer: 454545. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: gege 
+Eventbeskrivelse: gege 
+Startpris: 100
+Startdato og tid: 2018-12-12T19:00
+Slutdato og tid: 2018-12-13T02:00
+Ansvarlig facilitator: jgjg
+EventType:  Udflugt
+Lokation: fefe]
+Arrangements totale varighed: 0 dage 7 timer 0 minutter.
+Totalpris (uden moms): 3500 kr.
+
+Arrangementnavn: fefef. 
+Kundes email: fefe.
+Kundes telefonnummer: 232323. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: fefe 
+Eventbeskrivelse: fefe 
+Startpris: 100
+Startdato og tid: 2018-12-12T19:00
+Slutdato og tid: 2018-12-13T02:00
+Ansvarlig facilitator: jj
+EventType:  Udflugt
+Lokation: fefe]
+Arrangements totale varighed: 0 dage 7 timer 14halvetimer 0 minutter.
+Totalpris (uden moms): 3600 kr.

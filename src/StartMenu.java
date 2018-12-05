@@ -30,9 +30,9 @@ try{
         catch (Exception ex){
         System.out.println(" ");
         System.out.println(" ");
-        System.out.println("************************************************************************************");
-        System.out.println("Vi forstår ikke dit log in. Log ind med dit ID og Pinkode eller kontakt adminstrator");
-        System.out.println("************************************************************************************");
+        System.out.println("*********************************************************");
+        System.out.println("Vi forstår ikke dit log in. Log ind med dit ID og Pinkode");
+        System.out.println("*********************************************************");
 
             validerBruger();
         }

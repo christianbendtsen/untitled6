@@ -17,7 +17,6 @@ public class Arrangement {
     public Event event = new Event();
     public Event listeAfEvents;
     //public Facilitator listeAfFacilitator;
-    String filepath;
 
 
 

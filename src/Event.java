@@ -91,18 +91,18 @@ public class Event {
         System.out.println("** Vælg eventtype **");
         System.out.println("** transport = 1, møde = 2, udflugt = 3 **");
         int typeValg = console.nextInt();
-        EventType e = null;
+        EventType eventType = null;
         if (typeValg==1)
         {
-            e = transport.tilføjEventType();
+            eventType = transport.tilføjEventType();
         }
         else if (typeValg == 2)
         {
-            e = møde.tilføjEventType();
+            eventType = møde.tilføjEventType();
         }
         else if (typeValg==3)
         {
-            e = udflugt.tilføjEventType();
+            eventType = udflugt.tilføjEventType();
         }
         else {
             System.out.print("Vælg eventtype: transport = 1, møde = 2, udflugt = 3");
@@ -127,7 +127,7 @@ public class Event {
 
 
 
-        Event event = new Event(navn, beskrivelse, pris, startTidspunkt, slutTidspunkt, facilitator, e);
+        Event event = new Event(navn, beskrivelse, pris, startTidspunkt, slutTidspunkt, facilitator, eventType);
         return event;
 
     }

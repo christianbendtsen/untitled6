@@ -3,9 +3,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.time.DayOfWeek;
-import java.time.Duration;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -13,16 +10,19 @@ import java.util.Scanner;
 public class Arrangement {
 
     private String arrangementNavn;
-    private String totalTidOgPris;
+    //private double totalVarighed;
+    //private double totalPris;
     public String kundeEmail;
     public String kundeTlf;
     public Event event = new Event();
-    private LocalDateTime eventStart;
-    private LocalDateTime eventSlut;
-    private ArrayList<Event> eventListe = new ArrayList<Event>();
     public Event listeAfEvents;
+<<<<<<< Updated upstream
     //public Facilitator listeAfFacilitator;
     String filepath;
+=======
+    String filepath;
+
+>>>>>>> Stashed changes
 
 
 
@@ -33,7 +33,11 @@ public class Arrangement {
         return listeAfArrangementer;
     }
 
+    private ArrayList<Event> eventListe = new ArrayList<Event>();
 
+    public ArrayList<Event> getEventListe (){
+        return eventListe;
+    }
 
     public Arrangement (String arrangementNavn, String kundeEmail, String kundeTlf, ArrayList<Event> eventListe)
     {
@@ -49,25 +53,6 @@ public class Arrangement {
     }
 
 
-    //læser et events starttidspunkt fra Arraylisten eventliste
-    public LocalDateTime getEventStart (ArrayList<Event> eventListe)
-    {
-        for (int i=0; i<eventListe.size(); i++) {
-            eventStart = eventListe.get(i).getStartTidspunkt();
-
-        }
-        return eventStart;
-    }
-    //læser et events sluttidspunkt fra Arraylisten eventliste
-    public LocalDateTime getEventSlut (ArrayList<Event> eventListe)
-    {
-
-        for (int i=0; i<eventListe.size(); i++) {
-            eventSlut = eventListe.get(i).getSlutTidspunkt();
-
-        }
-        return eventSlut;
-    }
     public Arrangement opretArrangement()
     {
         Scanner console = new Scanner(System.in);
@@ -96,11 +81,12 @@ public class Arrangement {
 
         System.out.println("**Tilføj event 1=ja, 2=nej**");
         int valg = console.nextInt();
-        while(valg==1) {
+        do {
             eventListe.add(event.tilføjEvent());
             System.out.println("**Tilføj event 1=ja, 2=nej**");
             valg = console.nextInt();
         }
+        while (valg == 1);
 
         Arrangement arrangement = new Arrangement(arrangementNavn, kundeEmail, kundeTlf, eventListe);
         System.out.println("**Følgende Arrangement er oprettet**");
@@ -120,43 +106,22 @@ public class Arrangement {
         catch (Exception E)
         {
             JOptionPane.showMessageDialog(null, " not saved");
+            opretArrangement();
 
         }
+
+        //String indhold = Filer.getIndhold("arrangementer.csv");//oprindeligt arrangementer.csv
+        //indhold += "\n" + arrangement;//tilføjer den nye        //Filer.skrivFil("arrangementer.csv", indhold);
 
         return arrangement;
 
 
     }
-    public static String TotalTidOgPris (LocalDateTime eventStart, LocalDateTime eventSlut)
-    {
-        long totalTid = Math.abs(Duration.between(eventSlut,eventStart).toMinutes());//finder forskellen på et events start- og sluttidspunkt i minutter
-        long totalDage =totalTid/(24 * 60);//finder antal dage ud fra ovenstående forskel i minutter
-        long totalTimer= (totalTid/60)-(totalDage*24); //finder antal timer ud fra ovenstående forskel i minutter, fratrukket antal dage
-        long totalMinutter = totalTid-(totalTimer*60)-(totalDage*24*60);//finder antal minutter ud fra ovenstående forskel fratrukket dage og timer
 
-        long totalTidIHalveTimer = totalTid/30;//finder antal halve timer ud fra den samlede forskel i minutter - pris for arrangement betales pr. halve timer
-
-        long totalPris;
-        //regner prisen for at arrangement ud - én pris for hverdage og én pris for weekend (HUSK at skriv i opgaven, at vi regner pris ud fra hvornår eventet starter)
-        if(eventStart.getDayOfWeek() != DayOfWeek.SATURDAY && eventStart.getDayOfWeek() != DayOfWeek.SUNDAY)
-        {
-            totalPris = (totalTidIHalveTimer*250)+100;//+100 fordi et events startpris er 100 kr.
-        }
-        else
-        {
-            totalPris = (totalTidIHalveTimer*350)+100;//+100 fordi et events startpris er 100 kr.
-        }
-        //returnerer samlet antal dage,timer,minutter og den samlede pris i en string, som kan skrives ud sammen med resten af arrangementets info
-        return "Arrangements totale varighed: " + totalDage + " dage " + totalTimer +" timer " +  totalMinutter + " minutter." +
-                "\n" + "Totalpris (uden moms): " + totalPris + " kr.";
-
-    }
     public String toString()
     {
-        totalTidOgPris = TotalTidOgPris(getEventStart(eventListe), getEventSlut(eventListe));//kalder metoden overnfor for tid og pris, og indsætter et events start og slut tidspunkt
         return "\n" + "Arrangementnavn: " + arrangementNavn + ". \n" + "Kundes email: " + kundeEmail +
-                ".\n" + "Kundes telefonnummer: " + kundeTlf + ". \n\n" + "Der er tilknyttet følgende event:" + eventListe
-                + "\n" + totalTidOgPris;
+                ".\n" + "Kundes telefonnummer: " + kundeTlf + ". \n\n" + "Der er tilknyttet følgende event:" + eventListe;
     }
 
 }

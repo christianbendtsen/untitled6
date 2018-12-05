@@ -40,12 +40,11 @@ public class Sekretær {
 
     }
 
+
     public void opretArrangement() {
         //Arrangement.
     }
 
-    public void sletArrangement() {
-    }
 
     public void redigerArrangement() {
     }
@@ -57,6 +56,7 @@ public class Sekretær {
         System.out.println("1. Book Arrangement:");
         System.out.println("2. Se Arrangementliste");
         System.out.println("3. Log ud");
+        System.out.println("4. Slet arrangement");
         int in = console.nextInt();
         switch (in){
             case 1:
@@ -69,6 +69,7 @@ public class Sekretær {
                 SekretærMenu();
             case 3:
                 StartMenu.validerBruger();
+
         }
 
 

@@ -127,11 +127,7 @@ public class Event {
 
 
 
-<<<<<<< Updated upstream
-        Event event = new Event(navn, beskrivelse, pris, startTidspunkt, slutTidspunkt, facilitator, e);
-=======
         Event event = new Event(navn, beskrivelse, pris, startTidspunkt, slutTidspunkt, facilitator, eventType);
->>>>>>> Stashed changes
         return event;
 
     }

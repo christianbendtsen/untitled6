@@ -49,16 +49,14 @@ public class Arrangement {
     }
 
 
-    //læser et events starttidspunkt fra Arraylisten eventliste
+    //læser det første tilknyttede events starttidspunkt fra Arraylisten eventliste - skal bruges til at regne total tid og pris ud
     public LocalDateTime getEventStart (ArrayList<Event> eventListe)
     {
-        for (int i=0; i<eventListe.size(); i++) {
-            eventStart = eventListe.get(i).getStartTidspunkt();
+        eventStart = eventListe.get(0).getStartTidspunkt();
 
-        }
         return eventStart;
     }
-    //læser et events sluttidspunkt fra Arraylisten eventliste
+    //læser det sidste tilknyttede events sluttidspunkt fra Arraylisten eventliste - skal bruges til at regne total tid og pris ud
     public LocalDateTime getEventSlut (ArrayList<Event> eventListe)
     {
 
@@ -124,7 +122,6 @@ public class Arrangement {
         }
 
         return arrangement;
-
 
     }
     public static String TotalTidOgPris (LocalDateTime eventStart, LocalDateTime eventSlut)

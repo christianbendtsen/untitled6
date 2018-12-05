@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.security.KeyStore;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -75,8 +76,7 @@ public class Sekretær {
         //Arrangement.
     }
 
-    public void sletArrangement() {
-    }
+
 
     public void redigerArrangement() {
     }
@@ -85,9 +85,10 @@ public class Sekretær {
         Scanner console = new Scanner (System.in);
         System.out.println("Velkommen Sekretær");
         System.out.println("Vælg følgende handling: ");
-        System.out.println("1. Book Arrangement:");
+        System.out.println("1. Book Arrangement");
         System.out.println("2. Se Arrangementliste");
-        System.out.println("3. Log ud");
+        System.out.println("3. Slet arrangement");
+        System.out.println("4. Log ud");
         int in = console.nextInt();
         switch (in){
             case 1:
@@ -99,10 +100,24 @@ public class Sekretær {
                 ArrangementListe();
                 SekretærMenu();
             case 3:
+                sletArrangement();
+                SekretærMenu();
+                case 4:
                 StartMenu.validerBruger();
         }
+    }
+    public static void sletArrangement(){
+        System.out.println("Skriv navn på fil som ønskes slettet efterfulgt af .txt");
+        Scanner scanner = new Scanner(System.in);
+
+        File file = new File(scanner.nextLine());
 
 
+        if (file.delete()) {
+            System.out.println(file.getName() + " is deleted");
+        } else {
+            System.out.println("operation failed");
+        }
 
     }
 }

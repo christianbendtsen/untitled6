@@ -1,0 +1,28 @@
+
+Arrangementnavn: Danske Bank. 
+Kundes email: dk@gmail.com.
+Kundes telefonnummer: 11111112. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: Bustur 
+Eventbeskrivelse: Transport for bustur 
+Startpris: 100
+Startdato og tid: 2018-12-11T13:00
+Slutdato og tid: 2018-12-11T23:00
+Ansvarlig facilitator: Gustav
+EventType:  Transport
+Transportmiddel: Bus
+Afhentningstidspunkt: 13:00
+Drop Off tidspunkt: A-Bar
+ Afhentningssted: Danske Bank HQ
+Drop Off sted: A-Bar, 
+Eventnavn: hey 
+Eventbeskrivelse: yoyo 
+Startpris: 100
+Startdato og tid: 1996-05-05T20:00
+Slutdato og tid: 1996-05-05T21:00
+Ansvarlig facilitator: Gustav
+EventType:  Udflugt
+Lokation: A-bar]
+Arrangements totale varighed: 8254 dage 16 timer 0 minutter.
+Totalpris (uden moms): 99056100 kr.

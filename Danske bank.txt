@@ -1,0 +1,32 @@
+
+Arrangementnavn: Danske bank julefrokost. 
+Kundes email: Danske@hotmail.com.
+Kundes telefonnummer: 45 56 67 78. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: Julefrokost Danskebank i forum 
+Eventbeskrivelse: Vi har aldrig hvidvasket penge 
+Pris: 100
+Startdato: d. 12 December 2018
+Slutdato: d. 13 December 2018
+Start tid: kl 16.00. 
+Slut tid: kl 05.30
+Ansvarlig facilitator: Christian
+EventType:  Møde
+Udstyr: Borde og stole]
+
+Arrangementnavn: wf. 
+Kundes email: wfwg@jnwf.com.
+Kundes telefonnummer: 45. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: wegrweg 
+Eventbeskrivelse: wegweg wegettw tt24t2 
+Startpris: 100
+Startdato og tid: 1994-03-01T20:45
+Slutdato og tid: 1994-03-01T21:00
+Ansvarlig facilitator: chris
+EventType:  Møde
+Udstyr: dg]
+Arrangements totale varighed: 0 dage 0 timer 15 minutter.
+Totalpris (uden moms): 100 kr.

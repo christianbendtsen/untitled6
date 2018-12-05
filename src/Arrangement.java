@@ -112,13 +112,13 @@ public class Arrangement {
             pw.println(arrangement);
             pw.flush();
             pw.close();
-
             JOptionPane.showMessageDialog(null, "saved");
-        }
-        catch (Exception E)
-        {
-            JOptionPane.showMessageDialog(null, " not saved");
 
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, " not saved");
         }
 
         return arrangement;

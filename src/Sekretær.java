@@ -1,7 +1,4 @@
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.security.KeyStore;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Sekretær {
@@ -29,7 +26,7 @@ public class Sekretær {
             input.close();
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            ex.printStackTrace(); //printStackTrace viser fejlen, hvis der er en fejl
         }
 
         //Scanner reader = new Scanner(newFileInputStream("hej.txt""));
@@ -50,7 +47,7 @@ public class Sekretær {
     public void redigerArrangement() {
     }
 
-    public static void SekretærMenu(){
+    public static void sekretærMenu(){
         Scanner console = new Scanner (System.in);
         System.out.println("Velkommen Sekretær");
         System.out.println("Vælg følgende handling: ");
@@ -62,11 +59,11 @@ public class Sekretær {
             case 1:
                 Arrangement a = new Arrangement();
                 a.opretArrangement();
-                SekretærMenu();
+                sekretærMenu();
                 break;
             case 2:
                 ArrangementListe();
-                SekretærMenu();
+                sekretærMenu();
             case 3:
                 StartMenu.validerBruger();
         }

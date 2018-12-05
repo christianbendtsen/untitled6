@@ -5,6 +5,7 @@ public class Main
         Personale.addSekretærDummyData();
         Personale.addFacilitatorDummyData();
         startMenu.validerBruger();
+        hejhej
 
     }
 }

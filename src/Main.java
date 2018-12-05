@@ -6,10 +6,5 @@ public class Main
         Personale.addFacilitatorDummyData();
         startMenu.validerBruger();
 
-<<<<<<< Updated upstream
-     
-=======
-
->>>>>>> Stashed changes
     }
 }

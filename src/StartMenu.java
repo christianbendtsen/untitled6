@@ -19,11 +19,13 @@ try{
             int inPin = input.nextInt();
             if (Personale.Facilitatorliste.get(inId).CheckPin(inPin)) {
                 Facilitator.facilitatormenu(sekretær);
+                break;
             } else if (Personale.Sekretærliste.get(inId).CheckPin(inPin)) {
                 Sekretær.SekretærMenu();
                 break;
             } else {
                 System.out.println("*** !!! Forkert log-in, prøv igen !!! ***");
+                break;
             }
         }
         validerBruger();}

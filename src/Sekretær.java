@@ -12,6 +12,7 @@ public class Sekretær {
         System.out.println("Du har nu følgende muligheder: ");
         System.out.println("1. Se alle arrangementer for specifik facilitator");
         System.out.println("2. Se specifikt arrangement");
+        System.out.println("3. Log ud");
         int in = console.nextInt();
         switch (in) {
             case 1:
@@ -58,7 +59,13 @@ public class Sekretær {
 
                 } catch (Exception ex) {
                     ex.printStackTrace();
+                    System.out.println("Kunne ikke finde ønskede fil");
+                    ArrangementListe();
+
                 }
+            case 3: {
+                StartMenu.validerBruger();
+            }
         }
 
         System.out.println("***************************");
@@ -93,19 +100,38 @@ public class Sekretær {
                 StartMenu.validerBruger();
         }
     }
-    public static void sletArrangement(){
-        System.out.println("Skriv navn på fil som ønskes slettet efterfulgt af .txt");
-        Scanner scanner = new Scanner(System.in);
+    public static void sletArrangement() {
+        Scanner console = new Scanner(System.in);
 
-        File file = new File(scanner.nextLine());
+        System.out.println("Du har nu følgende muligheder: ");
+        System.out.println("1. Slet arrangement");
+        System.out.println("2. Tilbage til sekretærmenu");
+        System.out.println("3. Log ud");
+
+        int in = console.nextInt();
+        switch (in) {
+
+            case 1:
+            System.out.println("Skriv navn på fil som ønskes slettet efterfulgt af .txt");
+
+            Scanner scanner = new Scanner(System.in);
+
+            File file = new File(scanner.nextLine());
 
 
-        if (file.delete()) {
-            System.out.println(file.getName() + " is deleted");
-        } else {
-            System.out.println("operation failed");
+            if (file.delete()) {
+                System.out.println(file.getName() + " er sletted");
+            } else {
+                System.out.println("operation fejlede");
+            }
+            break;
+            case 2:
+                SekretærMenu();
+            break;
+            case 3:
+                StartMenu.validerBruger();
+                break;
         }
-
     }
 }
 

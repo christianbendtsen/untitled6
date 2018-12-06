@@ -13,9 +13,9 @@ public class Arrangement {
 
     private String arrangementNavn;
     private String totalTidOgPris;
-    public String kundeEmail;
-    public String kundeTlf;
-    public Event event = new Event();
+    private String kundeEmail;
+    private String kundeTlf;
+    private Event event = new Event();
     private LocalDateTime eventStart;
     private LocalDateTime eventSlut;
     private ArrayList<Event> eventListe = new ArrayList<Event>();

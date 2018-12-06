@@ -52,7 +52,7 @@ public class Arrangement {
         }
         return eventSlut;
     }
-    public Arrangement opretArrangement()
+    public void opretArrangement()
     {
         Scanner console = new Scanner(System.in);
 
@@ -68,18 +68,7 @@ public class Arrangement {
         System.out.println();
         String kundeEmail = console.nextLine();
         System.out.print("Kundes telefonnummer: ");
-        String kundeTlf;
-        while (true) {
-            try {
-                kundeTlf = console.nextLine();
-                break;
-            }
-            catch (InputMismatchException e) {
-                System.out.print("Input er ikke et tal. Skriv venligst tal: ");
-                console.nextLine();
-            }
-        }
-
+        String kundeTlf =  console.nextLine();
         System.out.println("**Tilføj event 1=ja, 2=nej**");
         int valg = console.nextInt();
         while(valg==1) {
@@ -127,7 +116,6 @@ public class Arrangement {
 
         }
 
-        return arrangement;
     }
     public static String TotalTidOgPris (LocalDateTime eventStart, LocalDateTime eventSlut)
     {

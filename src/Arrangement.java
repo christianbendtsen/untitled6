@@ -19,7 +19,7 @@ public class Arrangement {
     private LocalDateTime eventStart;
     private LocalDateTime eventSlut;
     private ArrayList<Event> eventListe = new ArrayList<Event>();
-
+hej hej
 
     public Arrangement (String arrangementNavn, String kundeEmail, String kundeTlf, ArrayList<Event> eventListe)
     {

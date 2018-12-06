@@ -1,13 +1,8 @@
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.security.KeyStore;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Sekretær {
-    private String Arrangementnavn;
-    private double Pris;
+
 
     public Sekretær(){
     }
@@ -72,14 +67,6 @@ public class Sekretær {
 
     }
 
-    public void opretArrangement() {
-        //Arrangement.
-    }
-
-
-
-    public void redigerArrangement() {
-    }
 
     public static void SekretærMenu(){
         Scanner console = new Scanner (System.in);

@@ -3,6 +3,9 @@ import java.util.ArrayList;
 public class Personale {
     private int Id;
     private int Pin;
+    public static ArrayList<Personale> Sekretærliste = new ArrayList<Personale>();
+    public static ArrayList<Personale> Facilitatorliste = new ArrayList<>();
+
 
     public boolean CheckPin(int pin) {
         return this.Pin == pin;
@@ -12,8 +15,7 @@ public class Personale {
         this.Id=id;
         this.Pin=pin;
     }
-    public static ArrayList<Personale> Sekretærliste = new ArrayList<Personale>();
-    public static ArrayList<Personale> Facilitatorliste = new ArrayList<>();
+
 
     public static void addSekretærDummyData()
     {

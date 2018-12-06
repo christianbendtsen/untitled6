@@ -5,8 +5,10 @@ public class Facilitator {
     private double pris;
     private int id;
     private int pin;
-    //StartMenu startMenu = new StartMenu();
-    //Arrangement arrangement = new Arrangement();
+
+    public Facilitator() {
+
+    }
 
     public static void facilitatormenu(Sekretær sekretær) { // to be continued....
         Scanner console = new Scanner(System.in);
@@ -25,7 +27,5 @@ public class Facilitator {
                 break;
         }
     }
-    public Facilitator() {
 
-    }
 }

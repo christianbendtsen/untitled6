@@ -1,0 +1,36 @@
+
+Arrangementnavn: hey. 
+Kundes email: hey.
+Kundes telefonnummer: 123. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: hey 
+Eventbeskrivelse: hey 
+Startpris: 100
+Startdato og tid: 1995-05-05T14:30
+Slutdato og tid: 1995-05-05T14:30
+Ansvarlig facilitator: gus
+EventType:  Udflugt
+Lokation: hey]
+Arrangements totale varighed: 0 dage 0 timer 0 minutter.
+Totalpris (uden moms): 100 kr.
+
+Arrangementnavn: Danske Bank Julefrokost. 
+Kundes email: vingtoft@gmail.com.
+Kundes telefonnummer: 112. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: Hey 
+Eventbeskrivelse: hyehey 
+Startpris: 100
+Startdato og tid: 1995-05-05T13:30
+Slutdato og tid: 1995-05-05T14:30
+Ansvarlig facilitator: gus
+EventType:  Transport
+Transportmiddel: Bus
+Afhentningstidspunkt: 13
+Drop Off tidspunkt: og nu
+ Afhentningssted: Her
+Drop Off sted: og nu]
+Arrangements totale varighed: 0 dage 1 timer 0 minutter.
+Totalpris (uden moms): 600 kr.

@@ -4,8 +4,6 @@ import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class Event {
-    Sekretær sekretær = new Sekretær(); //bruger vi på linje 86
-    Transport t = new Transport();
     private String navn;
     private int pris = 100;
     private String beskrivelse;
@@ -107,25 +105,6 @@ public class Event {
         else {
             System.out.print("Vælg eventtype: transport = 1, møde = 2, udflugt = 3");
         }
-
-        /*try {
-            FileWriter fw = new FileWriter(filepath,true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter pw = new PrintWriter(bw);
-
-            pw.println(navn+ ","+ pris+ ","+ beskrivelse+ ","+ startDato+ ","+ slutDato+ ","+ tidStart+ ","+ tidSlut+ ","+ facilitator+","+ type+",");
-            pw.flush();
-            pw.close();
-
-            JOptionPane.showMessageDialog(null, "saved");
-        }
-        catch (Exception E)
-        {
-            JOptionPane.showMessageDialog(null, " not saved");
-
-        }*/
-
-
 
         Event event = new Event(navn, beskrivelse, pris, startTidspunkt, slutTidspunkt, facilitator, eventType);
         return event;

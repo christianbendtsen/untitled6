@@ -3,15 +3,11 @@ import java.util.ArrayList;
 public class Personale {
     private int Id;
     private int Pin;
-    public static int aktivBruger;
 
     public boolean CheckPin(int pin) {
         return this.Pin == pin;
     }
 
-    public Personale(){
-
-    }
     public Personale(int id, int pin){
         this.Id=id;
         this.Pin=pin;
@@ -25,7 +21,6 @@ public class Personale {
         Sekretærliste.add(new Personale(1, 11));
         Sekretærliste.add(new Personale(2, 22));
         Sekretærliste.add(new Personale(3, 33));
-        //Sekretærliste.add(new Personale(4, 44));
     }
 
     public static void addFacilitatorDummyData()

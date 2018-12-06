@@ -8,8 +8,7 @@ public class Transport implements EventType {
     public String slutTidspunkt;
     public String pickUp;
     public String dropOff;
-
-
+    
     public Transport(String transportMiddel, String startTidspunkt, String slutTidspunkt, String pickUp, String dropOff) {
 
         this.transportMiddel = transportMiddel;

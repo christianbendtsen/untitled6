@@ -3,10 +3,6 @@ import java.util.Scanner;
 
 public class Sekretær {
 
-
-    public Sekretær(){
-    }
-
     public static void ArrangementListe() {
         Scanner console = new Scanner(System.in);
         System.out.println("Du har nu følgende muligheder: ");
@@ -27,11 +23,11 @@ public class Sekretær {
 
                 input = new Scanner(file);
 
-
                 while (input.hasNextLine()) {
                     String line = input.nextLine();
                     System.out.println(line);
                 }
+
                 input.close();
 
             } catch (Exception ex) {

@@ -12,7 +12,7 @@ public class Event {
     private String facilitator;
     private EventType type;
 
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy,HH:mm");
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy,HH:mm"); // den der definerer hvilket format dato og tid skal skrives ind, for at kunne parse bruger input til localDateTime  objekt
 
 
     Transport transport = new Transport();
@@ -59,13 +59,13 @@ public class Event {
         while (true){
 
             try{
-                startTidspunkt = LocalDateTime.parse(console.next(), formatter);
+                startTidspunkt = LocalDateTime.parse(console.next(), formatter); // parser bruger input
                 break;
             }
 
             catch(DateTimeParseException e){
 
-                System.out.print("Skriv venligst dato og klokkelset i følgende format: dd.MM.åååå,TT:mm ");
+                System.out.print("Skriv venligst dato og klokkelset i følgende format: dd.MM.åååå,TT:mm "); // hvis det ikke kan parses
                 console.nextLine();
             }
         }
@@ -92,11 +92,11 @@ public class Event {
         EventType eventType = null;
         if (typeValg==1)
         {
-            eventType = transport.tilføjEventType();
+            eventType = transport.tilføjEventType(); // 1 betyder at eventType = transport + metoden tilføjEventType(fra vores eventType interface)
         }
         else if (typeValg == 2)
         {
-            eventType = møde.tilføjEventType();
+            eventType = møde.tilføjEventType(); // metoden tilføjEventType returnerer et objekt af eventType, i både transport, møde og udflugt(med forskellige parameterer)
         }
         else if (typeValg==3)
         {
@@ -107,11 +107,11 @@ public class Event {
         }
 
         Event event = new Event(navn, beskrivelse, pris, startTidspunkt, slutTidspunkt, facilitator, eventType);
-        return event;
+        return event; // bruges i arrangement hvor det gemmes i en arrayliste
 
     }
 
-    public String toString() {
+    public String toString() { // skriver  objekt ud som en String, hvis man ikke har toString, så skrives objektet ud som en "adresse".
         return "\n" + "Eventnavn: " + navn + " \n" + "Eventbeskrivelse: " + beskrivelse + " \n" +
                 "Startpris: " + pris + "\n" + "Startdato og tid: " + startTidspunkt + "\n" + "Slutdato og tid: " + slutTidspunkt + "\n" +
                 "Ansvarlig facilitator: " + facilitator + "\n" + "EventType: " + type;

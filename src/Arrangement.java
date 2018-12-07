@@ -6,7 +6,6 @@ import java.time.DayOfWeek;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Arrangement {
@@ -38,7 +37,7 @@ public class Arrangement {
     //læser det første tilknyttede events starttidspunkt fra Arraylisten eventliste - skal bruges til at regne total tid og pris ud
     public LocalDateTime getEventStart (ArrayList<Event> eventListe)
     {
-        eventStart = eventListe.get(0).getStartTidspunkt();
+        eventStart = eventListe.get(0).getStartTidspunkt(); // læser plads nummer 0 i arrylisten eventListe
 
         return eventStart;
     }
@@ -46,8 +45,8 @@ public class Arrangement {
     public LocalDateTime getEventSlut (ArrayList<Event> eventListe)
     {
 
-        for (int i=0; i<eventListe.size(); i++) {
-            eventSlut = eventListe.get(i).getSlutTidspunkt();
+        for (int i=0; i<eventListe.size(); i++) { // så længe i er mindre en længden på arrylisten eventListe looper den
+            eventSlut = eventListe.get(i).getSlutTidspunkt(); // returnere det sidste sluttidspunkt
 
         }
         return eventSlut;
@@ -72,7 +71,7 @@ public class Arrangement {
         System.out.println("**Tilføj event 1=ja, 2=nej**");
         int valg = console.nextInt();
         while(valg==1) {
-            eventListe.add(event.tilføjEvent());
+            eventListe.add(event.tilføjEvent()); // Bliver tilføjet til arraylisten eventListe
             System.out.println("**Tilføj event 1=ja, 2=nej**");
             valg = console.nextInt();
         }
@@ -83,15 +82,15 @@ public class Arrangement {
         System.out.println(arrangement);
 
         try {
-            FileWriter fw = new FileWriter(filepath,true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter pw = new PrintWriter(bw);
+            FileWriter fw = new FileWriter(filepath,true); // opretter et objekt, sætter append true, så vi kan tilføje til filen.
+            BufferedWriter bw = new BufferedWriter(fw); // sørger for at det bliver skrevet pænest muligt
+            PrintWriter pw = new PrintWriter(bw); // giver adgang til syntaks så vi kan printe
 
-            pw.println(arrangement);
-            pw.flush();
-            pw.close();
+            pw.println(arrangement); // printer hele arrangememtet i en TXT fil
+            pw.flush(); // sørger for at alt er skrevet til filen
+            pw.close(); // lukker filen
 
-            JOptionPane.showMessageDialog(null, "saved");
+            JOptionPane.showMessageDialog(null, "saved"); // Swing bliver importeret, og en dialog boks kommer frem på skærmen med teksten "saved"
         }
         catch (Exception E)
         {
@@ -117,7 +116,7 @@ public class Arrangement {
         }
 
     }
-    public static String TotalTidOgPris (LocalDateTime eventStart, LocalDateTime eventSlut)
+    public static String totalTidOgPris(LocalDateTime eventStart, LocalDateTime eventSlut)
     {
         long totalTid = Math.abs(Duration.between(eventSlut,eventStart).toMinutes());//finder forskellen på et events start- og sluttidspunkt i minutter
         long totalDage =totalTid/(24 * 60);//finder antal dage ud fra ovenstående forskel i minutter
@@ -127,7 +126,7 @@ public class Arrangement {
         long totalTidIHalveTimer = totalTid/30;//finder antal halve timer ud fra den samlede forskel i minutter - pris for arrangement betales pr. halve timer
 
         long totalPris;
-        //regner prisen for at arrangement ud - én pris for hverdage og én pris for weekend (HUSK at skriv i opgaven, at vi regner pris ud fra hvornår eventet starter)
+        //regner prisen for at arrangement ud - én pris for hverdage og én pris for weekend
         if(eventStart.getDayOfWeek() != DayOfWeek.SATURDAY && eventStart.getDayOfWeek() != DayOfWeek.SUNDAY)
         {
             totalPris = (totalTidIHalveTimer*250)+100;//+100 fordi et events startpris er 100 kr.
@@ -141,9 +140,9 @@ public class Arrangement {
                 "\n" + "Totalpris (uden moms): " + totalPris + " kr.";
 
     }
-    public String toString()
+    public String toString() // skriver arrangement objekt ud som en String, hvis man ikke har toString, så skrives arrangement ud som en "adresse".
     {
-        totalTidOgPris = TotalTidOgPris(getEventStart(eventListe), getEventSlut(eventListe));//kalder metoden overnfor for tid og pris, og indsætter et events start og slut tidspunkt
+        totalTidOgPris = totalTidOgPris(getEventStart(eventListe), getEventSlut(eventListe));//kalder metoden overnfor for tid og pris, og indsætter et events start og slut tidspunkt
         return "\n" + "Arrangementnavn: " + arrangementNavn + ". \n" + "Kundes email: " + kundeEmail +
                 ".\n" + "Kundes telefonnummer: " + kundeTlf + ". \n\n" + "Der er tilknyttet følgende event:" + eventListe
                 + "\n" + totalTidOgPris;

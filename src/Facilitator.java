@@ -10,8 +10,8 @@ public class Facilitator {
 
     }
 
-    public static void facilitatormenu(Sekretær sekretær) { // to be continued....
-        Scanner console = new Scanner(System.in);
+    public static void facilitatormenu(Sekretær sekretær) { // Sekretær som parameter for at bruge metoden arrangementliste fra sekretær klassen
+        Scanner console = new Scanner(System.in); // System.in for at tage imod input
         System.out.println("Velkommen facilitator");
         System.out.println("Du har følgende muligheder: ");
         System.out.println("1. Se Arrangementliste");

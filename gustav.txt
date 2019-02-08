@@ -82,3 +82,19 @@ EventType:  Udflugt
 Lokation: her]
 Arrangements totale varighed: 0 dage 1 timer 0 minutter.
 Totalpris (uden moms): 600 kr.
+
+Arrangementnavn: KEA's årlige julefrokost. 
+Kundes email: kea@gmail.com.
+Kundes telefonnummer: 123456789. 
+
+Der er tilknyttet følgende event:[
+Eventnavn: Udstyr til festen 
+Eventbeskrivelse: Højtalere til festen 
+Startpris: 100
+Startdato og tid: 2018-12-10T17:00
+Slutdato og tid: 2018-12-11T15:00
+Ansvarlig facilitator: GustavGustav
+EventType:  Møde
+Udstyr: Højtalere]
+Arrangements totale varighed: 0 dage 22 timer 0 minutter.
+Totalpris (uden moms): 11100 kr.

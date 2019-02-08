@@ -25,7 +25,6 @@ try{
                 Sekretær.sekretærMenu();
 
             }
-
 }
         catch (Exception ex){
         System.out.println(" ");

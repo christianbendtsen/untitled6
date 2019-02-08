@@ -1,11 +1,11 @@
 public class Main
 {
-    public static void main(String[] args)
-    {
-        StartMenu startMenu = new StartMenu();
-        Personale.addSekretærDummyData();
+    public static void main(String[] args) {
+        Personale.addSekretærDummyData(); // Data bliver tilføjet
         Personale.addFacilitatorDummyData();
-        startMenu.validerBruger();
+        StartMenu.validerBruger(); // kalder klassen og metoden hvor det hele kører fra
+
+
 
 
     }

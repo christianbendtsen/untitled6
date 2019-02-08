@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Sekretær {
 
+
+
     public static void ArrangementListe() {
         Scanner console = new Scanner(System.in);
         System.out.println("Du har nu følgende muligheder: ");
@@ -17,21 +19,22 @@ public class Sekretær {
                 System.out.print("Skriv facilitatornavn med filtype bagefter: ");
                 System.out.println("\nEksempel: gustav.txt");
 
-                Scanner input = new Scanner(System.in);
+                Scanner input = new Scanner(System.in); // importerer scanner for at læse filer
 
-                File file = new File(input.nextLine());
+                File file = new File(input.nextLine()); // opretter objekt af Fil, med det formål at få filepath, brugeren selv taster ind.
 
-                input = new Scanner(file);
+                input = new Scanner(file); // scanner bruger den fil vi lige har oprettet
 
-                while (input.hasNextLine()) {
-                    String line = input.nextLine();
+
+                while (input.hasNextLine()) { // så længe scanneren har en næste linje den kan scanne.
+                    String line = input.nextLine(); // så længe der er en ny linje bliver den udskrevet.
                     System.out.println(line);
                 }
-
-                input.close();
+                input.close(); // for at lukke scanneren
 
             } catch (Exception ex) {
-                ex.printStackTrace();
+                ex.printStackTrace(); //  printer evt fejl
+                System.out.println("Kunne ikke finde ønskede fil");
             }
             break;
             case 2:
@@ -71,7 +74,7 @@ public class Sekretær {
     }
 
 
-    public static void SekretærMenu(){
+    public static void sekretærMenu(){
         Scanner console = new Scanner (System.in);
         System.out.println("Velkommen Sekretær");
         System.out.println("Vælg følgende handling: ");
@@ -82,16 +85,16 @@ public class Sekretær {
         int in = console.nextInt();
         switch (in){
             case 1:
-                Arrangement a = new Arrangement();
+                Arrangement a = new Arrangement(); // opretter instans af arrangement for at kunne kalder metoden opret arrrangement
                 a.opretArrangement();
-                SekretærMenu();
+                sekretærMenu();
                 break;
             case 2:
                 ArrangementListe();
-                SekretærMenu();
+                sekretærMenu();
             case 3:
                 sletArrangement();
-                SekretærMenu();
+                sekretærMenu();
                 case 4:
                 StartMenu.validerBruger();
         }
@@ -116,13 +119,13 @@ public class Sekretær {
 
 
             if (file.delete()) {
-                System.out.println(file.getName() + " er sletted");
+                System.out.println(file.getName() + " er slettet");
             } else {
                 System.out.println("operation fejlede");
             }
             break;
             case 2:
-                SekretærMenu();
+                sekretærMenu();
             break;
             case 3:
                 StartMenu.validerBruger();

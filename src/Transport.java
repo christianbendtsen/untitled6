@@ -39,11 +39,12 @@ public class Transport implements EventType {
         String dropOff = input.nextLine();
 
         EventType type = new Transport(transportmiddel, startTidspunkt, slutTidspunkt, pickUp, dropOff);
-        return type;
+        return type; // i stedet for at oprette et objekt af Transport, kan vi via vores interface som transport implementerer oprette et objekt af EventType,
+        // og tilføje Transports parameterer, dette kan vi returnere som en eventType som vi kalder type
 
     }
 
-    public String toString() {
+    public String toString() { // skriver objekt ud som en String, hvis man ikke har toString, så skrives objektet ud som en "adresse".
         return " Transport" + "\n" + "Transportmiddel: " + transportMiddel + "\n" + "Afhentningstidspunkt: " + startTidspunkt + "\n"+
                 "Drop Off tidspunkt: " + dropOff + "\n" + " Afhentningssted: " + pickUp + "\n" +
                 "Drop Off sted: " + dropOff;
